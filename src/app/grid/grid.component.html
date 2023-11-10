@@ -1,0 +1,10 @@
+
+<div  class="container flex flex-wrap justify-evenly">
+    <div *ngFor="let artwork of artworks | keyvalue" 
+        class="mb-2">
+            <img class="w-52 h-52 rounded-3xl" 
+                src="https://www.artic.edu/iiif/2/{{artwork.value}}/full/843,/0/default.jpg" 
+                onerror="this.onerror=null; this.remove();"
+                [routerLink]="['/artworks', artwork.key]">
+    </div>
+</div>

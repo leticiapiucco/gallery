@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
-export interface Art {
-  title:string,
-  author:string,
-  image_id:string,
+export type Art = {
+  id: number
+  title: string,
+  author: string,
+  image_id: string,
   place_of_origin: string,
   type: string,
-  //tags: string[],
 }
 
 @Component({

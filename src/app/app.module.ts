@@ -6,16 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { GridComponent } from './grid/grid.component';
-import { ModulesComponent } from './models/modules.component';
 import { ArtDetailsComponent } from './art-details/art-details.component';
+import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     GridComponent,
-    ModulesComponent,
-    ArtDetailsComponent
+    ArtDetailsComponent,
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

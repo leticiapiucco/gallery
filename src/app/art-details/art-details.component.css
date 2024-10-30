@@ -1,0 +1,20 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.img{
+    grid-column: 1;
+}
+
+.details{
+    grid-column: 2;
+}
+
+.details .tags{
+    display : flex;
+    flex-wrap: wrap;
+}
+.tags a{
+    padding-inline: 0.5em
+}

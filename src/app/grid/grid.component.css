@@ -1,0 +1,12 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.grid-item{
+    width: 15em;
+    height: 15em;
+    align-content: center;
+    align-self: center;
+}

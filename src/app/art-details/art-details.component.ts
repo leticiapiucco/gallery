@@ -1,6 +1,6 @@
 import { Component, Input, TemplateRef } from '@angular/core';
 import { PicturesService } from '../services/pictures.service';
-import { Art } from '../models/modules.component';
+import { Art } from '../models/art.model';
 import { ActivatedRoute } from '@angular/router';
 import { EMPTY, Observable, catchError } from 'rxjs';
 import { NgIfContext } from '@angular/common';

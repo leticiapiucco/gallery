@@ -1,11 +1,9 @@
-<div *ngIf="artworks$ | async as artworks; else loading">
+<div *ngIf="artworks as artworks; else loading">
 
-  <div class=" flex flex-wrap justify-evenly items-center mx-auto w-screen gap-3 p-2">
-    <!-- <div *ngFor="let artwork of artworks$ |async;" class="mb-2"> -->
+  <div class="grid">
     <div *ngFor="let artwork of artworks">
-      <!--- now go and make some loading indicator for this since this is per --->
-      <img class="w-52 h-52 rounded-3xl" src="https://www.artic.edu/iiif/2/{{artwork.image_id}}/full/843,/0/default.jpg"
-        onerror="this.onerror=null; this.remove();" [routerLink]="['/artworks', artwork.id]">
+      <img class="grid-item" src="https://www.artic.edu/iiif/2/{{artwork.image_id}}/full/843,/0/default.jpg"
+        [routerLink]="['/artworks', artwork.id]">
     </div>
   </div>
 </div>

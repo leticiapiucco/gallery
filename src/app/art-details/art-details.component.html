@@ -1,40 +1,33 @@
 <div *ngIf="art$|async as art;else loading">
-  {{art.title}}
-  hey there
+    <h1>{{art.title}}</h1>
+    <div class="grid">
+        <img src="https://www.artic.edu/iiif/2/{{art.image_id}}/full/843,/0/default.jpg"
+            onerror="this.onerror=null; this.remove();">
+        <div class="details">
+            <ul>
+                <li>
+                    Author: {{art.author}}
+    
+                </li>
+                <li>
+                    Country: {{art.place_of_origin}}
+    
+                </li>
+                <li>
+                    Type: {{art.type}}
+                </li>
+
+                <li class="tags">
+                    Tags: 
+                    <a *ngFor="let tag of art.term_titles">{{tag}}</a>  
+                </li>
+            </ul>
+        </div>
+    </div>    
 </div>
 
 <ng-template #loading>
   Loading art piece...
-
 </ng-template>
 
-<!--
 
-<p class="text-center text-6xl p-5">{{art.title}}</p>
-<div class="grid grid-cols-2 gap-1">
-    <div class="flex justify-center">
-        <img class="h-4/5 rounded-lg"src="https://www.artic.edu/iiif/2/{{art.image_id}}/full/843,/0/default.jpg"
-        onerror="this.onerror=null; this.remove();">
-    </div>
-    <div class="bg-slate-200 flex justify-center ml-10 mr-10 p-10 h-4/5 rounded-lg">
-        <ul>
-            <li>
-                Author: {{art.author}}
-
-            </li>
-            <li>
-                Country: {{art.place_of_origin}}
-
-            </li>
-            <li>
-                Type: {{art.type}}
-            </li>
-            <li>
-                Tags: {{art.tags}}
-
-            </li>
-        </ul>
-    </div>
-</div>
-
--->
